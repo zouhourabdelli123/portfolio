@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zouhour Abdelli — Full-Stack Developer | Java · Spring Boot · React · Angular · Mobile · DevOps</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #080c14;
+            --bg2: #0d1220;
+            --bg3: #111827;
+            --surface: #141c2e;
+            --surface2: #1a2438;
+            --border: rgba(255,255,255,0.07);
+            --accent: #4f8ef7;
+            --accent2: #7c5af0;
+            --accent3: #0dd3a4;
+            --text: #e8edf5;
+            --text2: #8a96b0;
+            --text3: #5a6580;
+            --gradient: linear-gradient(135deg, #4f8ef7, #7c5af0);
+            --gradient2: linear-gradient(135deg, #0dd3a4, #4f8ef7);
+            --glow: 0 0 40px rgba(79,142,247,0.2);
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        /* ===== SCROLLBAR ===== */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: var(--bg); }
+        ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 10px; }
+
+        /* ===== NOISE OVERLAY ===== */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.4;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            padding: 0 2rem;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            background: rgba(8,12,20,0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            transition: all 0.3s;
+        }
+        .navbar.scrolled {
+            height: 60px;
+            background: rgba(8,12,20,0.95);
+        }
+        .nav-inner {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            font-size: 1.3rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+        .logo span { opacity: 0.6; font-weight: 400; }
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: var(--text2);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            transition: color 0.2s;
+            position: relative;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px; left: 0;
+            width: 0; height: 1.5px;
+            background: var(--accent);
+            transition: width 0.3s;
+        }
+        .nav-links a:hover { color: var(--text); }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-cta {
+            background: var(--gradient);
+            color: #fff !important;
+            padding: 0.45rem 1.2rem;
+            border-radius: 6px;
+            font-size: 0.85rem !important;
+            font-weight: 600 !important;
+        }
+        .nav-cta::after { display: none !important; }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 5px;
+        }
+        .hamburger span {
+            width: 24px; height: 2px;
+            background: var(--text2);
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding: 100px 2rem 60px;
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+        .hero-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.15;
+        }
+        .hero-orb-1 {
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, #4f8ef7, transparent 70%);
+            top: -150px; right: -100px;
+            animation: float1 8s ease-in-out infinite;
+        }
+        .hero-orb-2 {
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, #7c5af0, transparent 70%);
+            bottom: -100px; left: -50px;
+            animation: float2 10s ease-in-out infinite;
+        }
+        .hero-orb-3 {
+            width: 300px; height: 300px;
+            background: radial-gradient(circle, #0dd3a4, transparent 70%);
+            top: 40%; left: 40%;
+            animation: float1 12s ease-in-out infinite reverse;
+        }
+        @keyframes float1 {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(30px, -30px); }
+        }
+        @keyframes float2 {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(-20px, 20px); }
+        }
+        .hero-grid {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(79,142,247,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(79,142,247,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+        .hero-inner {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(79,142,247,0.1);
+            border: 1px solid rgba(79,142,247,0.25);
+            padding: 0.4rem 1rem;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+        .hero-badge::before {
+            content: '';
+            width: 6px; height: 6px;
+            background: var(--accent3);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.8); }
+        }
+        .hero-name {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.8rem, 5vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.05;
+            letter-spacing: -2px;
+            margin-bottom: 1rem;
+        }
+        .hero-name .line2 {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-roles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .role-tag {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            color: var(--text2);
+            font-weight: 500;
+        }
+        .hero-desc {
+            color: var(--text2);
+            font-size: 1rem;
+            max-width: 480px;
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+        }
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.75rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.25s;
+            cursor: pointer;
+            border: none;
+            font-family: 'DM Sans', sans-serif;
+        }
+        .btn-primary {
+            background: var(--gradient);
+            color: #fff;
+            box-shadow: 0 4px 20px rgba(79,142,247,0.3);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(79,142,247,0.5);
+        }
+        .btn-outline {
+            background: transparent;
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+        .btn-outline:hover {
+            background: var(--surface);
+            border-color: rgba(255,255,255,0.15);
+            transform: translateY(-2px);
+        }
+        .hero-socials {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2.5rem;
+        }
+        .social-link {
+            width: 40px; height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            color: var(--text2);
+            text-decoration: none;
+            transition: all 0.25s;
+            font-size: 1rem;
+        }
+        .social-link:hover {
+            background: var(--surface2);
+            color: var(--accent);
+            border-color: rgba(79,142,247,0.4);
+            transform: translateY(-3px);
+        }
+        /* Hero right visual */
+        .hero-visual {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .hero-code-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.8rem;
+            line-height: 1.8;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-code-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: var(--gradient);
+        }
+        .code-bar {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 1rem;
+        }
+        .code-dot {
+            width: 10px; height: 10px;
+            border-radius: 50%;
+        }
+        .code-dot:nth-child(1) { background: #ff5f57; }
+        .code-dot:nth-child(2) { background: #febc2e; }
+        .code-dot:nth-child(3) { background: #28c840; }
+        .code-kw { color: #7c5af0; }
+        .code-fn { color: #4f8ef7; }
+        .code-str { color: #0dd3a4; }
+        .code-cm { color: var(--text3); font-style: italic; }
+        .code-var { color: #e8b86d; }
+        .hero-stats-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+        .hero-stat {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1rem;
+            text-align: center;
+        }
+        .hero-stat-num {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-stat-label {
+            font-size: 0.75rem;
+            color: var(--text3);
+            margin-top: 0.2rem;
+        }
+
+        /* ===== SECTIONS ===== */
+        section { padding: 100px 2rem; position: relative; z-index: 1; }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-header {
+            margin-bottom: 3.5rem;
+        }
+        .section-eyebrow {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--accent);
+            margin-bottom: 0.75rem;
+        }
+        .section-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            letter-spacing: -1px;
+            line-height: 1.1;
+        }
+        .section-title span {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-line {
+            width: 50px; height: 3px;
+            background: var(--gradient);
+            border-radius: 10px;
+            margin-top: 1.2rem;
+        }
+
+        /* ===== ABOUT ===== */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        .about-text p {
+            color: var(--text2);
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+        .about-list {
+            list-style: none;
+            margin-top: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.7rem;
+        }
+        .about-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--text2);
+            font-size: 0.95rem;
+        }
+        .about-list li::before {
+            content: '';
+            width: 6px; height: 6px;
+            background: var(--accent);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .about-right {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        .stat-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .stat-card:hover {
+            border-color: rgba(79,142,247,0.3);
+            transform: translateY(-3px);
+            box-shadow: var(--glow);
+        }
+        .stat-number {
+            font-family: 'Syne', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .stat-label {
+            color: var(--text3);
+            font-size: 0.8rem;
+            margin-top: 0.3rem;
+        }
+        .available-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .available-dot {
+            width: 12px; height: 12px;
+            background: #0dd3a4;
+            border-radius: 50%;
+            flex-shrink: 0;
+            box-shadow: 0 0 12px rgba(13,211,164,0.6);
+            animation: pulse 2s infinite;
+        }
+        .available-text strong { color: var(--text); font-size: 0.95rem; }
+        .available-text p { color: var(--text3); font-size: 0.8rem; }
+
+        /* ===== PROJECTS ===== */
+        .projects { background: var(--bg2); }
+        .filter-row {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
+        }
+        .filter-btn {
+            padding: 0.45rem 1.1rem;
+            border-radius: 6px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            color: var(--text2);
+            font-size: 0.82rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: 'DM Sans', sans-serif;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--gradient);
+            color: #fff;
+            border-color: transparent;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 1.5rem;
+        }
+        .project-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            overflow: hidden;
+            transition: all 0.35s;
+            display: flex;
+            flex-direction: column;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(79,142,247,0.3);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.4), var(--glow);
+        }
+        .project-banner {
+            height: 130px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .project-banner::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: inherit;
+            opacity: 0.15;
+        }
+        .banner-react { background: linear-gradient(135deg, #1a2f5e, #0d1220); }
+        .banner-fullstack { background: linear-gradient(135deg, #1a3530, #0d1220); }
+        .banner-devops { background: linear-gradient(135deg, #2d1a4a, #0d1220); }
+        .banner-mobile { background: linear-gradient(135deg, #1a3535, #0d1220); }
+        .project-banner i {
+            position: relative;
+            z-index: 1;
+            opacity: 0.8;
+        }
+        .banner-react i { color: #61dafb; }
+        .banner-fullstack i { color: #ff2d20; }
+        .banner-devops i { color: #0db7ed; }
+        .banner-mobile i { color: #0dd3a4; }
+        .project-body {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .project-cat {
+            font-size: 0.72rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            margin-bottom: 0.6rem;
+        }
+        .project-body h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.7rem;
+            letter-spacing: -0.3px;
+        }
+        .project-body p {
+            color: var(--text2);
+            font-size: 0.875rem;
+            line-height: 1.6;
+            margin-bottom: 1.2rem;
+        }
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-bottom: 1rem;
+        }
+        .tech-tag {
+            background: rgba(79,142,247,0.08);
+            border: 1px solid rgba(79,142,247,0.2);
+            color: var(--accent);
+            padding: 0.2rem 0.65rem;
+            border-radius: 4px;
+            font-size: 0.73rem;
+            font-weight: 500;
+        }
+        .project-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+            flex: 1;
+        }
+        .project-features li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text2);
+            font-size: 0.82rem;
+            padding: 0.25rem 0;
+        }
+        .project-features li i {
+            color: var(--accent3);
+            font-size: 0.7rem;
+        }
+        .project-links {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: auto;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+        }
+        .link-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text2);
+            text-decoration: none;
+            padding: 0.45rem 1rem;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            background: var(--bg3);
+            transition: all 0.2s;
+        }
+        .link-btn:hover {
+            color: var(--accent);
+            border-color: rgba(79,142,247,0.4);
+            background: rgba(79,142,247,0.05);
+        }
+        .link-btn.primary {
+            background: var(--gradient);
+            color: #fff;
+            border-color: transparent;
+        }
+        .link-btn.primary:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        /* ===== SKILLS ===== */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+        .skill-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1.75rem;
+            transition: all 0.3s;
+        }
+        .skill-card:hover {
+            border-color: rgba(79,142,247,0.25);
+            transform: translateY(-3px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+        }
+        .skill-header {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            margin-bottom: 1.4rem;
+            padding-bottom: 1.2rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .skill-icon {
+            width: 42px; height: 42px;
+            border-radius: 11px;
+            background: rgba(79,142,247,0.1);
+            border: 1px solid rgba(79,142,247,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            color: var(--accent);
+            flex-shrink: 0;
+        }
+        .skill-header h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: -0.2px;
+        }
+        .skill-header p {
+            font-size: 0.75rem;
+            color: var(--text3);
+            margin-top: 0.1rem;
+        }
+        .skill-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.55rem;
+        }
+        .sbadge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.45rem 0.85rem;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            border: 1px solid var(--border);
+            background: var(--bg3);
+            color: var(--text2);
+            transition: all 0.2s;
+            cursor: default;
+        }
+        .sbadge:hover {
+            background: var(--surface2);
+            color: var(--text);
+            border-color: rgba(79,142,247,0.3);
+            transform: translateY(-1px);
+        }
+        .sbadge .sdot {
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .sdot-blue  { background: #4f8ef7; box-shadow: 0 0 6px rgba(79,142,247,0.6); }
+        .sdot-green { background: #0dd3a4; box-shadow: 0 0 6px rgba(13,211,164,0.6); }
+        .sdot-orange{ background: #f89820; box-shadow: 0 0 6px rgba(248,152,32,0.6); }
+        .sdot-red   { background: #ff2d20; box-shadow: 0 0 6px rgba(255,45,32,0.6); }
+        .sdot-purple{ background: #7c5af0; box-shadow: 0 0 6px rgba(124,90,240,0.6); }
+        .sdot-cyan  { background: #0db7ed; box-shadow: 0 0 6px rgba(13,183,237,0.6); }
+
+        /* ===== CONTACT ===== */
+        .contact { background: var(--bg2); }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        .contact-info h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+        .contact-info > p {
+            color: var(--text2);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+        .contact-items { display: flex; flex-direction: column; gap: 1rem; }
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1rem 1.2rem;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            transition: all 0.2s;
+        }
+        .contact-item:hover {
+            border-color: rgba(79,142,247,0.3);
+        }
+        .contact-icon {
+            width: 38px; height: 38px;
+            border-radius: 8px;
+            background: rgba(79,142,247,0.1);
+            border: 1px solid rgba(79,142,247,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent);
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+        .contact-item-text h4 {
+            font-size: 0.82rem;
+            color: var(--text3);
+            margin-bottom: 0.2rem;
+            font-weight: 500;
+        }
+        .contact-item-text a, .contact-item-text p {
+            font-size: 0.9rem;
+            color: var(--text);
+            text-decoration: none;
+        }
+        .contact-item-text a:hover { color: var(--accent); }
+        .contact-form {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 2rem;
+        }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .form-group { margin-bottom: 1.2rem; }
+        .form-group label {
+            display: block;
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: var(--text2);
+            margin-bottom: 0.5rem;
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            background: var(--bg3);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            color: var(--text);
+            font-size: 0.9rem;
+            font-family: 'DM Sans', sans-serif;
+            transition: border-color 0.2s;
+            outline: none;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: rgba(79,142,247,0.5);
+            background: rgba(79,142,247,0.03);
+        }
+        .form-group textarea { resize: vertical; min-height: 130px; }
+        .btn-full { width: 100%; justify-content: center; }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            padding: 2.5rem 2rem;
+        }
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .footer-left p {
+            color: var(--text3);
+            font-size: 0.85rem;
+        }
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+        .footer-links a {
+            color: var(--text3);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.2s;
+        }
+        .footer-links a:hover { color: var(--accent); }
+
+        /* ===== MOBILE NAV ===== */
+        @media (max-width: 900px) {
+            .hero-inner { grid-template-columns: 1fr; }
+            .hero-visual { display: none; }
+            .about-grid { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .projects-grid { grid-template-columns: 1fr; }
+            .skills-grid { grid-template-columns: 1fr; }
+            .hero-name { font-size: clamp(2.2rem, 10vw, 3.5rem); letter-spacing: -1px; }
+            .hero-badge,
+            .hero-name,
+            .hero-roles,
+            .hero-desc,
+            .hero-actions,
+            .hero-socials { animation: none !important; opacity: 1 !important; transform: none !important; }
+            section { padding: 70px 1.25rem; }
+        }
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 70px; left: 0; right: 0;
+                background: rgba(8,12,20,0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1.5rem;
+                border-bottom: 1px solid var(--border);
+                z-index: 999;
+            }
+            .nav-links.open { display: flex; }
+            .stats-grid { grid-template-columns: 1fr 1fr; }
+            .footer-inner { flex-direction: column; text-align: center; }
+            .techstack-grid { gap: 0.4rem; }
+        }
+
+        /* ===== SCROLL ANIMATIONS ===== */
+        .reveal { opacity: 1; transform: none; }
+        .js-ready .reveal {
+            opacity: 0;
+            transform: translateY(22px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .js-ready .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== TOAST ===== */
+        .toast {
+            position: fixed;
+            bottom: 2rem; right: 2rem;
+            background: var(--surface);
+            border: 1px solid rgba(13,211,164,0.4);
+            color: var(--text);
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            z-index: 9999;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .toast.show { transform: translateY(0); opacity: 1; }
+        .toast i { color: var(--accent3); }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+    <div class="nav-inner">
+        <div class="logo">Z<span>.</span>Abdelli</div>
+        <ul class="nav-links" id="navMenu">
+            <li><a href="#home" class="nav-link">Accueil</a></li>
+            <li><a href="#about" class="nav-link">À Propos</a></li>
+            <li><a href="#projects" class="nav-link">Projets</a></li>
+            <li><a href="#skills" class="nav-link">Compétences</a></li>
+            <li><a href="#contact" class="nav-cta nav-link">Contact</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+    <div class="hero-bg">
+        <div class="hero-grid"></div>
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-orb hero-orb-3"></div>
+    </div>
+    <div class="hero-inner container">
+        <div class="hero-left">
+            <div class="hero-badge">Disponible pour stage, alternance ou premier poste</div>
+            <h1 class="hero-name">
+                Zouhour<br>
+                <span class="line2">Abdelli</span>
+            </h1>
+            <div class="hero-roles">
+                <span class="role-tag">Full-Stack Developer</span>
+                <span class="role-tag">Java · Spring Boot · React · Angular · Mobile · DevOps</span>
+                <span class="role-tag">Applications web & APIs</span>
+            </div>
+            <p class="hero-desc">
+                Je conçois des applications web et mobiles claires et maintenables, avec un focus sur les API Java/Spring Boot,
+                les interfaces React et Angular, ainsi que le développement mobile avec React Native et Flutter, avec une sensibilité DevOps sur la conteneurisation et le déploiement.
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i> Voir mes projets
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <i class="fas fa-paper-plane"></i> Me contacter
+                </a>
+            </div>
+            <div class="hero-socials">
+                <a href="https://github.com/zouhourabdelli123" target="_blank" class="social-link" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/zouhour-abdelli" target="_blank" class="social-link" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:zouhourabdelli.dev@gmail.com" class="social-link" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-code-card">
+                <div class="code-bar">
+                    <div class="code-dot"></div>
+                    <div class="code-dot"></div>
+                    <div class="code-dot"></div>
+                </div>
+                <div>
+                    <span class="code-cm">// zouhour.config.js</span><br>
+                    <span class="code-kw">const</span> <span class="code-var">developer</span> = {<br>
+                    &nbsp;&nbsp;<span class="code-fn">name</span>: <span class="code-str">"Zouhour Abdelli"</span>,<br>
+                    &nbsp;&nbsp;<span class="code-fn">role</span>: <span class="code-str">"Full-Stack Developer"</span>,<br>
+                    &nbsp;&nbsp;<span class="code-fn">frontend</span>: [<span class="code-str">"React"</span>, <span class="code-str">"Angular"</span>, <span class="code-str">"JavaScript"</span>, <span class="code-str">"Tailwind"</span>],<br>
+                    &nbsp;&nbsp;<span class="code-fn">backend</span>: [<span class="code-str">"Java"</span>, <span class="code-str">"Spring Boot"</span>, <span class="code-str">"REST APIs"</span>],<br>
+                    &nbsp;&nbsp;<span class="code-fn">mobile</span>: [<span class="code-str">"React Native"</span>, <span class="code-str">"Flutter"</span>],<br>
+                    &nbsp;&nbsp;<span class="code-fn">tools</span>: [<span class="code-str">"Git"</span>, <span class="code-str">"Docker"</span>, <span class="code-str">"GitHub Actions"</span>, <span class="code-str">"MySQL"</span>],<br>
+                    &nbsp;&nbsp;<span class="code-fn">available</span>: <span class="code-kw">true</span><br>
+                    }
+                </div>
+            </div>
+            <div class="hero-stats-row">
+                <div class="hero-stat">
+                    <div class="hero-stat-num">4</div>
+                    <div class="hero-stat-label">Projets sélectionnés</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-num">Java</div>
+                    <div class="hero-stat-label">Backend principal</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-num">React</div>
+                    <div class="hero-stat-label">Frontend principal</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <div class="container">
+        <div class="section-header reveal">
+            <div class="section-eyebrow">Qui suis-je</div>
+            <h2 class="section-title">À Propos <span>de Moi</span></h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="about-grid">
+            <div class="about-text reveal">
+                <p>
+                    Développeuse full-stack orientée applications web et mobiles, je travaille principalement avec Java, Spring Boot,
+                    React, Angular et des technologies mobiles comme React Native et Flutter pour construire des interfaces propres, des APIs fiables et des workflows de livraison plus structurés.
+                </p>
+                <p>
+                    J’accorde une attention particulière à la lisibilité du code, à la structure du projet et à la qualité
+                    de l’expérience utilisateur. Mon objectif est de livrer des solutions simples à comprendre, faciles à maintenir et utiles.
+                </p>
+                <ul class="about-list">
+                    <li>Développement d’interfaces web avec React, Angular, JavaScript et Tailwind CSS</li>
+                    <li>Création d’APIs REST avec Java, Spring Boot, Spring Security et JPA</li>
+                    <li>Développement mobile cross-platform avec React Native et Flutter</li>
+                    <li>Conception de bases de données SQL avec MySQL et PostgreSQL</li>
+                    <li>Utilisation de Git, GitHub, Docker et bases CI/CD dans le cycle de développement</li>
+                    <li>Notions DevOps appliquées au déploiement, à la conteneurisation et à l’automatisation</li>
+                    <li>Capacité à travailler sur des projets full-stack, académiques ou personnels</li>
+                    <li>Approche centrée sur la clarté, la maintenabilité et l’amélioration continue</li>
+                </ul>
+            </div>
+            <div class="about-right reveal">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">4</div>
+                        <div class="stat-label">Projets mis en avant</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">Java</div>
+                        <div class="stat-label">Stack backend principal</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">React</div>
+                        <div class="stat-label">Stack frontend principal</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">Git</div>
+                        <div class="stat-label">Workflow, versioning & DevOps</div>
+                    </div>
+                </div>
+                <div class="available-card">
+                    <div class="available-dot"></div>
+                    <div class="available-text">
+                        <strong>Ouverte aux opportunités</strong>
+                        <p>Stage, alternance, premier poste ou collaboration sur projet web</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="projects">
+    <div class="container">
+        <div class="section-header reveal">
+            <div class="section-eyebrow">Portfolio</div>
+            <h2 class="section-title">Mes <span>Projets Sélectionnés</span></h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="filter-row reveal">
+            <button class="filter-btn active" data-filter="all">Tous</button>
+            <button class="filter-btn" data-filter="frontend">Frontend</button>
+            <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+            <button class="filter-btn" data-filter="backend">Backend / Java</button>
+            <button class="filter-btn" data-filter="mobile">Mobile</button>
+            <button class="filter-btn" data-filter="devops">DevOps</button>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card reveal" data-category="mobile">
+                <div class="project-banner" style="background: linear-gradient(135deg, #2c1b7a, #0d1220); display:flex; align-items:center; justify-content:center; gap:1rem;"><i class="fas fa-university fa-2x" style="color:#ffd166"></i><i class="fas fa-mobile-alt fa-2x" style="color:#7c5af0"></i></div>
+                <div class="project-body">
+                    <div class="project-cat">Mobile · Projet académique</div>
+                    <h3>Application mobile IIT Sfax</h3>
+                    <p>Application mobile réalisée dans le cadre d’un projet à l’Institut International de Technologie de Sfax, avec une interface pensée pour faciliter l’accès aux informations et services utiles aux étudiants.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React Native</span><span class="tech-tag">Flutter</span><span class="tech-tag">Mobile UI</span><span class="tech-tag">Projet IIT</span>
+                    </div>
+                    <ul class="project-features">
+                        <li><i class="fas fa-check-circle"></i> Application mobile orientée expérience utilisateur</li>
+                        <li><i class="fas fa-check-circle"></i> Projet développé dans un cadre académique à l’IIT Sfax</li>
+                        <li><i class="fas fa-check-circle"></i> Mise en pratique du développement cross-platform</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/zouhourabdelli123" target="_blank" class="link-btn primary"><i class="fab fa-github"></i> Code source</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card reveal" data-category="frontend">
+                <div class="project-banner banner-react"><i class="fab fa-react fa-2x"></i></div>
+                <div class="project-body">
+                    <div class="project-cat">Frontend · React</div>
+                    <h3>Dashboard d’analyse</h3>
+                    <p>Interface web conçue pour centraliser des indicateurs clés et améliorer la lecture des données avec une navigation claire et des composants réutilisables.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React</span><span class="tech-tag">JavaScript</span><span class="tech-tag">Chart.js</span><span class="tech-tag">Tailwind</span>
+                    </div>
+                    <ul class="project-features">
+                        <li><i class="fas fa-check-circle"></i> Visualisation claire des métriques</li>
+                        <li><i class="fas fa-check-circle"></i> Interface responsive et structurée</li>
+                        <li><i class="fas fa-check-circle"></i> Organisation modulaire des composants</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/zouhourabdelli123" target="_blank" class="link-btn primary"><i class="fab fa-github"></i> Code source</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card reveal" data-category="fullstack">
+                <div class="project-banner" style="background: linear-gradient(135deg, #1f1147, #0d1220); display:flex; align-items:center; justify-content:center; gap:1rem;"><i class="fas fa-graduation-cap fa-2x" style="color:#ffd166"></i><i class="fab fa-laravel fa-2x" style="color:#ff2d20"></i></div>
+                <div class="project-body">
+                    <div class="project-cat">Full Stack · Laravel / Blade</div>
+                    <h3>IIT V2 - Educational Platform</h3>
+                    <p>Plateforme éducative avancée avec frontend et backend intégrés, pensée pour centraliser la gestion académique dans un environnement web cohérent, moderne et responsive.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">JavaScript</span><span class="tech-tag">Blade</span><span class="tech-tag">PHP</span><span class="tech-tag">SCSS</span><span class="tech-tag">CSS</span>
+                    </div>
+                    <ul class="project-features">
+                        <li><i class="fas fa-check-circle"></i> Architecture full-stack avec composants UI modernes</li>
+                        <li><i class="fas fa-check-circle"></i> Synchronisation fluide des données entre les modules</li>
+                        <li><i class="fas fa-check-circle"></i> Design responsive sur desktop, tablette et mobile</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/zouhourabdelli123" target="_blank" class="link-btn primary"><i class="fab fa-github"></i> Code source</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card reveal" data-category="fullstack">
+                <div class="project-banner" style="background: linear-gradient(135deg, #34120f, #0d1220); display:flex; align-items:center; justify-content:center; gap:1rem;"><i class="fas fa-chalkboard-teacher fa-2x" style="color:#ffd166"></i><i class="fab fa-laravel fa-2x" style="color:#ff2d20"></i></div>
+                <div class="project-body">
+                    <div class="project-cat">Full Stack · Laravel</div>
+                    <h3>Enseignant Faculté - Teacher Management System</h3>
+                    <p>Plateforme de gestion dédiée aux enseignants, conçue pour centraliser le suivi des étudiants, les présences, les notes et les demandes administratives dans une seule interface.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Laravel</span><span class="tech-tag">Blade</span><span class="tech-tag">PHP</span><span class="tech-tag">CSS</span><span class="tech-tag">JavaScript</span>
+                    </div>
+                    <ul class="project-features">
+                        <li><i class="fas fa-check-circle"></i> Authentification enseignant et gestion du profil</li>
+                        <li><i class="fas fa-check-circle"></i> Suivi des présences et consultation de l’historique</li>
+                        <li><i class="fas fa-check-circle"></i> Gestion des listes d’étudiants, notes et documents</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/zouhourabdelli123" target="_blank" class="link-btn primary"><i class="fab fa-github"></i> Code source</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card reveal" data-category="fullstack frontend">
+                <div class="project-banner" style="background: linear-gradient(135deg, #123024, #0d1220); display:flex; align-items:center; justify-content:center; gap:1rem;"><i class="fas fa-shopping-bag fa-2x" style="color:#7ce38b"></i><i class="fab fa-laravel fa-2x" style="color:#ff2d20"></i></div>
+                <div class="project-body">
+                    <div class="project-cat">Full Stack · E-commerce</div>
+                    <h3>Winkels - Shop / E-commerce Platform</h3>
+                    <p>Solution e-commerce complète avec interface moderne et outils dédiés aux marchands, pensée pour offrir un parcours d’achat fluide et une gestion produit structurée.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">Blade</span><span class="tech-tag">PHP</span><span class="tech-tag">JavaScript</span><span class="tech-tag">SCSS</span>
+                    </div>
+                    <ul class="project-features">
+                        <li><i class="fas fa-check-circle"></i> Gestion du catalogue produits et des fiches article</li>
+                        <li><i class="fas fa-check-circle"></i> Interface d’achat avec panier et navigation claire</li>
+                        <li><i class="fas fa-check-circle"></i> Approche responsive mobile-first</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/zouhourabdelli123" target="_blank" class="link-btn primary"><i class="fab fa-github"></i> Code source</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card reveal" data-category="devops backend">
+                <div class="project-banner" style="background: linear-gradient(135deg, #0f2a2a, #0d1220); display:flex; align-items:center; justify-content:center; gap:1rem;"><i class="fab fa-docker fa-2x" style="color:#0db7ed"></i><i class="fas fa-infinity fa-2x" style="color:#7ce38b"></i></div>
+                <div class="project-body">
+                    <div class="project-cat">DevOps · Docker / CI-CD</div>
+                    <h3>Pipeline de déploiement & conteneurisation</h3>
+                    <p>Mise en place d’un workflow DevOps pour structurer le build, les tests et le déploiement d’une application web, avec une approche orientée fiabilité, automatisation et reproductibilité des environnements.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Docker</span><span class="tech-tag">GitHub Actions</span><span class="tech-tag">CI/CD</span><span class="tech-tag">Deployment</span>
+                    </div>
+                    <ul class="project-features">
+                        <li><i class="fas fa-check-circle"></i> Conteneurisation de l’application pour un environnement cohérent</li>
+                        <li><i class="fas fa-check-circle"></i> Automatisation des étapes de build et de vérification</li>
+                        <li><i class="fas fa-check-circle"></i> Base de workflow orientée livraison continue</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/zouhourabdelli123" target="_blank" class="link-btn primary"><i class="fab fa-github"></i> Code source</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card reveal" data-category="backend">
+                <div class="project-banner" style="background: linear-gradient(135deg, #1a2438, #0d1220); display:flex; align-items:center; justify-content:center; gap:1rem;"><i class="fab fa-java fa-2x" style="color:#f89820"></i><i class="fas fa-server fa-2x" style="color:#7c5af0"></i></div>
+                <div class="project-body">
+                    <div class="project-cat">Backend / Java</div>
+                    <h3>Application de gestion Java</h3>
+                    <p>Projet backend réalisé en Java pour structurer la logique métier, le traitement des données et la fiabilité des échanges entre les différents modules d’une application de gestion.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Java</span><span class="tech-tag">Spring Boot</span><span class="tech-tag">REST API</span><span class="tech-tag">MySQL</span>
+                    </div>
+                    <ul class="project-features">
+                        <li><i class="fas fa-check-circle"></i> Développement d’une logique métier claire et modulaire</li>
+                        <li><i class="fas fa-check-circle"></i> Conception d’API et gestion des opérations CRUD</li>
+                        <li><i class="fas fa-check-circle"></i> Intégration base de données et validation des flux</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/zouhourabdelli123" target="_blank" class="link-btn primary"><i class="fab fa-github"></i> Code source</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card reveal" data-category="frontend fullstack">
+                <div class="project-banner" style="background: linear-gradient(135deg, #7c1f7a, #0d1220); display:flex; align-items:center; justify-content:center; gap:1rem;"><i class="fab fa-angular fa-2x" style="color:#dd0031"></i><i class="fas fa-layer-group fa-2x" style="color:#ffd166"></i></div>
+                <div class="project-body">
+                    <div class="project-cat">Frontend · Angular</div>
+                    <h3>Application web Angular</h3>
+                    <p>Interface web développée avec Angular pour offrir une expérience utilisateur fluide, une navigation structurée et une organisation claire des composants dans une application métier.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Angular</span><span class="tech-tag">TypeScript</span><span class="tech-tag">SCSS</span><span class="tech-tag">API Integration</span>
+                    </div>
+                    <ul class="project-features">
+                        <li><i class="fas fa-check-circle"></i> Architecture frontend modulaire basée sur des composants réutilisables</li>
+                        <li><i class="fas fa-check-circle"></i> Intégration avec des services backend et gestion des données</li>
+                        <li><i class="fas fa-check-circle"></i> Interface responsive pensée pour un usage professionnel</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/zouhourabdelli123" target="_blank" class="link-btn primary"><i class="fab fa-github"></i> Code source</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="skills">
+    <div class="container">
+        <div class="section-header reveal">
+            <div class="section-eyebrow">Expertise</div>
+            <h2 class="section-title">Compétences & <span>Outils</span></h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-card reveal">
+                <div class="skill-header">
+                    <div class="skill-icon"><i class="fas fa-star"></i></div>
+                    <div><h3>Stack principal</h3><p>Les technologies que j’utilise le plus</p></div>
+                </div>
+                <div class="skill-badges">
+                    <span class="sbadge"><span class="sdot sdot-orange"></span>Java</span>
+                    <span class="sbadge"><span class="sdot sdot-green"></span>Spring Boot</span>
+                    <span class="sbadge"><span class="sdot sdot-blue"></span>React</span>
+                    <span class="sbadge"><span class="sdot sdot-cyan"></span>Angular</span>
+                    <span class="sbadge"><span class="sdot sdot-cyan"></span>JavaScript</span>
+                    <span class="sbadge"><span class="sdot sdot-red"></span>Laravel</span>
+                    <span class="sbadge"><span class="sdot sdot-orange"></span>MySQL</span>
+                    <span class="sbadge"><span class="sdot sdot-blue"></span>PostgreSQL</span>
+                </div>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-header">
+                    <div class="skill-icon"><i class="fas fa-code"></i></div>
+                    <div><h3>Frontend</h3><p>Interfaces web modernes et responsives</p></div>
+                </div>
+                <div class="skill-badges">
+                    <span class="sbadge"><span class="sdot sdot-blue"></span>React</span>
+                    <span class="sbadge"><span class="sdot sdot-red"></span>Angular</span>
+                    <span class="sbadge"><span class="sdot sdot-red"></span>Blade</span>
+                    <span class="sbadge"><span class="sdot sdot-cyan"></span>Tailwind CSS</span>
+                    <span class="sbadge"><span class="sdot sdot-purple"></span>HTML / CSS</span>
+                    <span class="sbadge"><span class="sdot sdot-blue"></span>Responsive Design</span>
+                </div>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-header">
+                    <div class="skill-icon" style="background:rgba(13,211,164,0.1);border-color:rgba(13,211,164,0.25);color:#0dd3a4"><i class="fas fa-mobile-alt"></i></div>
+                    <div><h3>Mobile</h3><p>Applications cross-platform et interfaces mobiles</p></div>
+                </div>
+                <div class="skill-badges">
+                    <span class="sbadge"><span class="sdot sdot-blue"></span>React Native</span>
+                    <span class="sbadge"><span class="sdot sdot-cyan"></span>Flutter</span>
+                    <span class="sbadge"><span class="sdot sdot-purple"></span>Mobile UI</span>
+                    <span class="sbadge"><span class="sdot sdot-green"></span>Cross-platform</span>
+                </div>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-header">
+                    <div class="skill-icon" style="background:rgba(248,152,32,0.1);border-color:rgba(248,152,32,0.25);color:#f89820"><i class="fab fa-java"></i></div>
+                    <div><h3>Backend</h3><p>Services, sécurité et logique métier</p></div>
+                </div>
+                <div class="skill-badges">
+                    <span class="sbadge"><span class="sdot sdot-orange"></span>Java</span>
+                    <span class="sbadge"><span class="sdot sdot-green"></span>Spring Boot</span>
+                    <span class="sbadge"><span class="sdot sdot-green"></span>Spring Security</span>
+                    <span class="sbadge"><span class="sdot sdot-blue"></span>REST APIs</span>
+                    <span class="sbadge"><span class="sdot sdot-purple"></span>JPA / Hibernate</span>
+                    <span class="sbadge"><span class="sdot sdot-red"></span>Laravel / PHP</span>
+                </div>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-header">
+                    <div class="skill-icon" style="background:rgba(124,90,240,0.1);border-color:rgba(124,90,240,0.25);color:#7c5af0"><i class="fas fa-cloud"></i></div>
+                    <div><h3>DevOps</h3><p>Automatisation, conteneurisation et livraison</p></div>
+                </div>
+                <div class="skill-badges">
+                    <span class="sbadge"><span class="sdot sdot-cyan"></span>Docker</span>
+                    <span class="sbadge"><span class="sdot sdot-green"></span>GitHub Actions</span>
+                    <span class="sbadge"><span class="sdot sdot-blue"></span>CI/CD</span>
+                    <span class="sbadge"><span class="sdot sdot-purple"></span>Deployment</span>
+                    <span class="sbadge"><span class="sdot sdot-orange"></span>Linux basics</span>
+                </div>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-header">
+                    <div class="skill-icon"><i class="fas fa-tools"></i></div>
+                    <div><h3>Outils de travail</h3><p>Versioning, conteneurisation et workflow</p></div>
+                </div>
+                <div class="skill-badges">
+                    <span class="sbadge"><span class="sdot sdot-blue"></span>Git / GitHub</span>
+                    <span class="sbadge"><span class="sdot sdot-cyan"></span>Docker</span>
+                    <span class="sbadge"><span class="sdot sdot-green"></span>GitHub Actions</span>
+                    <span class="sbadge"><span class="sdot sdot-orange"></span>Postman</span>
+                    <span class="sbadge"><span class="sdot sdot-purple"></span>VS Code</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+    <div class="container">
+        <div class="section-header reveal">
+            <div class="section-eyebrow">Contact</div>
+            <h2 class="section-title">Parlons de <span>Votre Besoin</span></h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-info reveal">
+                <h3>Disponible pour échanger</h3>
+                <p>
+                    Je suis ouverte aux opportunités de stage, d’alternance, de premier poste ou de collaboration
+                    sur des projets web, mobile ou liés à l’industrialisation et au déploiement. Le plus simple est de me contacter par email ou via GitHub.
+                </p>
+                <div class="contact-items">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-item-text"><h4>Email</h4><a href="mailto:zouhourabdelli.dev@gmail.com">zouhourabdelli.dev@gmail.com</a></div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-item-text"><h4>Localisation</h4><p>Tunisie · Disponible à distance</p></div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-briefcase"></i></div>
+                        <div class="contact-item-text"><h4>Recherche</h4><p>Stage, alternance, premier poste</p></div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fab fa-github"></i></div>
+                        <div class="contact-item-text"><h4>GitHub</h4><a href="https://github.com/zouhourabdelli123" target="_blank">github.com/zouhourabdelli123</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form reveal" id="contactForm">
+                <div class="form-group">
+                    <label>Envoyer un message</label>
+                    <textarea id="fmessage" rows="8" placeholder="Bonjour Zouhour, je vous contacte pour..."></textarea>
+                </div>
+                <button class="btn btn-primary btn-full" onclick="handleSubmit()">
+                    <i class="fas fa-paper-plane"></i> Ouvrir mon client email
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-left">
+            <p>© 2026 Zouhour Abdelli — Full-Stack Developer · Web, Mobile & DevOps</p>
+        </div>
+        <div class="footer-links">
+            <a href="#home">Accueil</a>
+            <a href="#projects">Projets</a>
+            <a href="https://github.com/zouhourabdelli123" target="_blank">GitHub</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+</footer>
+
+<!-- TOAST -->
+<div class="toast" id="toast">
+    <i class="fas fa-check-circle"></i>
+    Votre client email a été ouvert.
+</div>
+
+<script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+    hamburger.addEventListener('click', () => navMenu.classList.toggle('open'));
+    navMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navMenu.classList.remove('open')));
+
+    window.addEventListener('load', () => {
+        if (window.innerWidth > 900) {
+            document.body.classList.add('js-ready');
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, i) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => entry.target.classList.add('visible'), i * 60);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.08 });
+            reveals.forEach(el => observer.observe(el));
+        }
+    });
+
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const filter = btn.dataset.filter;
+            projectCards.forEach(card => {
+                const show = filter === 'all' || card.dataset.category === filter;
+                card.style.display = show ? 'flex' : 'none';
+            });
+        });
+    });
+
+    const sections = document.querySelectorAll('section[id]');
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(s => {
+            if (window.scrollY >= s.offsetTop - 100) current = s.id;
+        });
+        document.querySelectorAll('.nav-link').forEach(a => {
+            a.style.color = a.getAttribute('href') === `#${current}` ? 'var(--text)' : '';
+        });
+    });
+
+    function handleSubmit() {
+        const message = document.getElementById('fmessage').value.trim();
+        const subject = encodeURIComponent('Prise de contact depuis votre portfolio');
+        const body = encodeURIComponent(message || 'Bonjour Zouhour,');
+        window.location.href = `mailto:zouhourabdelli.dev@gmail.com?subject=${subject}&body=${body}`;
+        const toast = document.getElementById('toast');
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2500);
+    }
+</script>
+</body>
+</html>
