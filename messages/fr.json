@@ -1,0 +1,530 @@
+{
+  "meta": {
+    "title": "Zouhour Abdelli — Ingénieure logiciel · Développeuse Full-Stack",
+    "shortTitle": "Zouhour Abdelli",
+    "description": "Ingénieure logiciel full-stack : je conçois des produits complets de bout en bout — web, mobile et API — avec Laravel, React, React Native et FastAPI. Basée à Sfax, Tunisie.",
+    "keywords": [
+      "Zouhour Abdelli",
+      "Ingénieure logiciel",
+      "Développeuse Full-Stack",
+      "Laravel",
+      "React",
+      "React Native",
+      "FastAPI",
+      "API REST",
+      "Tunisie",
+      "Sfax"
+    ],
+    "ogAlt": "Zouhour Abdelli — Ingénieure logiciel et développeuse Full-Stack"
+  },
+  "a11y": {
+    "skipToContent": "Aller au contenu",
+    "mainNav": "Navigation principale",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "languageSwitcher": "Choisir la langue",
+    "toggleTheme": "Basculer entre thème clair et sombre",
+    "scrollToTop": "Revenir en haut",
+    "newTab": "(s'ouvre dans un nouvel onglet)",
+    "home": "Zouhour Abdelli — accueil",
+    "socialLinks": "Réseaux sociaux"
+  },
+  "nav": {
+    "brand": "Zouhour Abdelli",
+    "about": "À propos",
+    "skills": "Compétences",
+    "experience": "Expérience",
+    "projects": "Projets",
+    "education": "Formation",
+    "contact": "Contact",
+    "hireMe": "Discutons"
+  },
+  "languages": {
+    "en": "English",
+    "fr": "Français",
+    "ar": "العربية",
+    "short": {
+      "en": "EN",
+      "fr": "FR",
+      "ar": "عربي"
+    }
+  },
+  "hero": {
+    "badge": "Ouverte à de nouvelles opportunités",
+    "greeting": "Bonjour, je suis",
+    "name": "Zouhour Abdelli",
+    "title": "Ingénieure logiciel · Développeuse Full-Stack",
+    "tagline": "Je conçois des produits complets — web, mobile et API — du premier schéma de base de données jusqu'à la mise en production.",
+    "location": "Basée à Sfax, Tunisie",
+    "ctaWork": "Voir mes projets",
+    "ctaContact": "Me contacter",
+    "ctaCv": "Télécharger mon CV",
+    "photoAlt": "Portrait de Zouhour Abdelli, ingénieure logiciel et développeuse full-stack",
+    "scroll": "Défiler",
+    "stats": [
+      {
+        "value": "4+",
+        "label": "Années à concevoir des logiciels"
+      },
+      {
+        "value": "Web + Mobile + API",
+        "label": "Toutes les couches du produit"
+      },
+      {
+        "value": "0 → 1",
+        "label": "Cycle de vie produit complet"
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "À propos",
+    "title": "Une ingénieure qui porte le produit entier, pas seulement un ticket.",
+    "paragraphs": [
+      "Ingénieure logiciel full-stack, j'accompagne les produits de l'idée jusqu'à la production. Chez Exadev, je conçois et développe des applications web et mobiles évolutives avec Laravel, React et React Native — du schéma de base de données et des API REST jusqu'à l'interface que les utilisateurs ont réellement entre les mains.",
+      "Je suis titulaire d'un diplôme d'ingénieur (bac+6) en Génie Logiciel et Informatique Décisionnelle de l'Institut International de Technologie de Sfax (2026), ainsi que d'une licence en Informatique et Multimédia de l'ISIMS (2023). Pour mon projet de fin d'études, j'ai conçu et développé seule, de bout en bout, une plateforme intelligente de gestion des tâches.",
+      "Pendant trois ans, j'ai été membre active du Microsoft Tech Club ISIMS — le reflet de mon goût pour l'apprentissage, le partage et l'innovation collective."
+    ],
+    "highlights": {
+      "role": {
+        "label": "Actuellement",
+        "value": "Développeuse Full-Stack",
+        "detail": "Exadev · depuis juin 2023"
+      },
+      "degree": {
+        "label": "Formation",
+        "value": "Diplôme d'ingénieur · bac+6",
+        "detail": "Génie Logiciel & BI · 2026"
+      },
+      "community": {
+        "label": "Communauté",
+        "value": "Microsoft Tech Club ISIMS",
+        "detail": "Membre active pendant 3 ans"
+      },
+      "location": {
+        "label": "Basée à",
+        "value": "Sfax, Tunisie",
+        "detail": "Ouverte à de nouvelles opportunités"
+      }
+    },
+    "principlesTitle": "Ma façon de travailler",
+    "principles": [
+      {
+        "title": "Responsabilité de bout en bout",
+        "text": "Du cadrage et de la conception du schéma jusqu'au déploiement, je prends en charge tout le cycle de vie."
+      },
+      {
+        "title": "Pensé pour évoluer",
+        "text": "Des API sécurisées, des requêtes optimisées et un code maintenable qui tient la route quand le produit grandit."
+      },
+      {
+        "title": "Agile par nature",
+        "text": "Cérémonies Scrum, revues de code et workflows Git rigoureux pour des livraisons régulières et transparentes."
+      }
+    ]
+  },
+  "skills": {
+    "eyebrow": "Compétences",
+    "title": "Une boîte à outils full-stack, du pixel à la production.",
+    "intro": "Les technologies et les méthodes que j'utilise pour concevoir, développer et livrer des produits complets.",
+    "groups": {
+      "frontend": {
+        "title": "Front-End",
+        "description": "Des interfaces rapides, claires et responsives sur tous les écrans.",
+        "items": [
+          "React.js",
+          "JavaScript",
+          "Bootstrap",
+          "Interfaces responsives"
+        ]
+      },
+      "backend": {
+        "title": "Back-End",
+        "description": "Des API et des services sécurisés, bien structurés et conçus pour évoluer.",
+        "items": [
+          "Laravel",
+          "PHP",
+          "FastAPI",
+          "API REST",
+          "Microservices"
+        ]
+      },
+      "mobile": {
+        "title": "Mobile",
+        "description": "Des applications multiplateformes, de la maquette à la production.",
+        "items": [
+          "React Native",
+          "Android & iOS",
+          "Développement Android"
+        ]
+      },
+      "data": {
+        "title": "Données",
+        "description": "Des schémas et des requêtes pensés pour la performance.",
+        "items": [
+          "MySQL",
+          "Optimisation SQL",
+          "Conception de bases de données"
+        ]
+      },
+      "ai": {
+        "title": "IA & Optimisation",
+        "description": "De l'intelligence là où elle apporte une vraie valeur.",
+        "items": [
+          "Intégration de l'API Gemini",
+          "Modèles de régression",
+          "Optimisation CP-SAT"
+        ]
+      },
+      "languages": {
+        "title": "Langages",
+        "description": "Les langages que j'écris au quotidien.",
+        "items": [
+          "PHP",
+          "JavaScript",
+          "Java",
+          "Python"
+        ]
+      },
+      "tools": {
+        "title": "Outils & Méthodes",
+        "description": "Ma façon de collaborer et de garantir la qualité.",
+        "items": [
+          "Git",
+          "GitHub",
+          "Agile Scrum",
+          "Revues de code",
+          "Gestion de projet",
+          "Design"
+        ]
+      }
+    }
+  },
+  "experience": {
+    "eyebrow": "Expérience",
+    "title": "Là où j'ai construit.",
+    "intro": "Des premiers stages jusqu'à la pleine responsabilité de produits web et mobiles.",
+    "current": "Actuel",
+    "types": {
+      "work": "Temps plein",
+      "internship": "Stage",
+      "community": "Communauté"
+    },
+    "items": {
+      "exadevFullstack": {
+        "role": "Développeuse Full-Stack",
+        "company": "Exadev",
+        "period": "Juin 2023 – Aujourd'hui",
+        "location": "Sfax, Tunisie",
+        "bullets": [
+          "Conception et maintenance d'applications web full-stack avec Laravel, React.js, PHP et JavaScript, pour plus de fiabilité et d'évolutivité côté utilisateurs.",
+          "Développement et sécurisation d'endpoints d'API REST garantissant une communication fiable entre front-end et back-end pour les équipes produit.",
+          "Optimisation des schémas MySQL et des requêtes SQL, avec à la clé de meilleurs temps de réponse et des performances de base de données accrues.",
+          "Réalisation d'interfaces responsives avec React.js et Bootstrap, et livraison d'applications mobiles multiplateformes (Android/iOS) avec React Native, de la conception à la production.",
+          "Participation aux cérémonies Agile Scrum avec des équipes pluridisciplinaires ; gestion de versions et revues de code avec Git/GitHub."
+        ],
+        "note": "Également Mobile Engineer : applications React Native pour Android et iOS."
+      },
+      "exadevIntern": {
+        "role": "Stagiaire — Développement Android & Design",
+        "company": "Exadev",
+        "period": "Févr. 2023 – Juin 2023",
+        "location": "",
+        "bullets": [
+          "Développement Android et design d'interfaces lors d'un stage sur site."
+        ],
+        "note": ""
+      },
+      "hypermediaDev": {
+        "role": "Développeuse",
+        "company": "Hypermedia",
+        "period": "Août 2022 – Août 2023",
+        "location": "",
+        "bullets": [
+          "Développement d'un système web de gestion de stock : catalogue produits, traitement des commandes et statistiques de ventes."
+        ],
+        "note": ""
+      },
+      "hypermediaIntern": {
+        "role": "Stagiaire — PHP & Laravel",
+        "company": "Hypermedia",
+        "period": "Août 2022 – Sept. 2022",
+        "location": "À distance",
+        "bullets": [
+          "Stage en télétravail axé sur le développement web avec PHP et Laravel."
+        ],
+        "note": ""
+      },
+      "mtc": {
+        "role": "Membre active",
+        "company": "Microsoft Tech Club ISIMS",
+        "period": "Déc. 2020 – Déc. 2023",
+        "location": "Sfax, Tunisie",
+        "bullets": [
+          "Trois années d'engagement dans la communauté du club, avec un accent sur le design — et un attachement durable à l'innovation et au partage des connaissances."
+        ],
+        "note": ""
+      }
+    }
+  },
+  "projects": {
+    "eyebrow": "Réalisations",
+    "title": "Des produits que j'ai conçus, développés et livrés.",
+    "intro": "D'une plateforme dopée à l'IA développée en solo à des applications en production utilisées au quotidien.",
+    "flagship": "Projet phare",
+    "viewCase": "Voir l'étude de cas",
+    "items": {
+      "omnichannel": {
+        "title": "Plateforme omnicanale intelligente de gestion des tâches",
+        "org": "Projet de fin d'études · Institut International de Technologie",
+        "period": "2023 – 2026",
+        "role": "Ingénieure unique, de bout en bout",
+        "summary": "Une plateforme de gestion des tâches qui vous suit sur le web, le mobile et le navigateur — avec un assistant de planification IA, la prédiction des retards et une priorisation automatique.",
+        "highlights": [
+          "Application web, mobile et extension navigateur",
+          "Assistant de planification propulsé par Gemini",
+          "Prédiction des retards + planification CP-SAT"
+        ],
+        "challenge": "Les tâches sont éparpillées entre appareils et outils, et décider quoi faire ensuite relève encore largement de l'intuition. L'objectif : une plateforme unique qui accompagne l'utilisateur sur le web, le mobile et le navigateur, et l'aide réellement à planifier son travail — conçue, développée et livrée par une seule ingénieure, sur une architecture digne de la production.",
+        "solution": "J'ai conçu et développé une plateforme omnicanale reposant sur une architecture de microservices FastAPI, qui alimente une application web React, une application mobile React Native et une extension de navigateur. Sur un schéma de base de données et des API REST soigneusement conçus, j'ai ajouté trois briques intelligentes : un assistant de planification contextuel propulsé par l'API Gemini, un modèle de régression qui prédit les retards, et un algorithme d'optimisation CP-SAT qui planifie automatiquement les priorités.",
+        "features": [
+          {
+            "title": "Trois clients, une plateforme",
+            "text": "Une application web React, une application mobile React Native et une extension de navigateur partagent les mêmes API et les mêmes données."
+          },
+          {
+            "title": "Assistant de planification contextuel",
+            "text": "Une intégration de l'API Gemini qui comprend le contexte de l'utilisateur pour l'aider à planifier son travail."
+          },
+          {
+            "title": "Prédiction des retards",
+            "text": "Un modèle de régression identifie les tâches susceptibles de prendre du retard, pour agir en amont."
+          },
+          {
+            "title": "Priorisation automatique",
+            "text": "Un algorithme d'optimisation CP-SAT transforme priorités et contraintes en planning."
+          },
+          {
+            "title": "Back-end en microservices",
+            "text": "Des services FastAPI, un schéma de données et des API REST pensés pour l'évolutivité, la sécurité et la maintenabilité."
+          },
+          {
+            "title": "Cycle Agile complet",
+            "text": "Cadrage, conception, développement, tests et déploiement, menés en Scrum en tant que seule développeuse."
+          }
+        ],
+        "outcome": "Un produit complet et intelligent, livré de bout en bout par une seule ingénieure : trois applications clientes, un back-end en microservices évolutif et trois briques d'IA et d'optimisation qui fonctionnent ensemble — l'aboutissement de mon diplôme d'ingénieur."
+      },
+      "inventory": {
+        "title": "Système de gestion de stock",
+        "org": "Hypermedia",
+        "period": "2022 – 2023",
+        "role": "Développeuse",
+        "summary": "Un système web de gestion de stock couvrant le catalogue produits, le traitement des commandes et les statistiques de ventes.",
+        "highlights": [
+          "Catalogue produits",
+          "Traitement des commandes",
+          "Statistiques de ventes"
+        ],
+        "challenge": "Produits, commandes et données de ventes devaient être réunis en un seul endroit, pour gérer le catalogue, traiter les commandes et suivre l'activité sans jongler entre plusieurs outils.",
+        "solution": "J'ai développé une application web qui rassemble le cœur de l'activité : un catalogue produits structuré, un circuit de traitement des commandes et un tableau de bord de statistiques de ventes.",
+        "features": [
+          {
+            "title": "Catalogue produits",
+            "text": "Créer, organiser et maintenir les produits dans un catalogue unique et structuré."
+          },
+          {
+            "title": "Traitement des commandes",
+            "text": "Suivre chaque commande tout au long de son circuit, de la création à la finalisation."
+          },
+          {
+            "title": "Statistiques de ventes",
+            "text": "Un tableau de bord qui transforme les données de ventes en statistiques claires et lisibles."
+          }
+        ],
+        "outcome": "Une plateforme web unique pour tout le cycle du stock — de l'ajout d'un produit à l'analyse de ses ventes."
+      },
+      "mobile": {
+        "title": "Applications mobiles multiplateformes",
+        "org": "Exadev",
+        "period": "2023 – Aujourd'hui",
+        "role": "Mobile Engineer",
+        "summary": "Des applications React Native pour Android et iOS, livrées de la conception jusqu'à la production.",
+        "highlights": [
+          "Android & iOS",
+          "Une seule base de code React Native",
+          "De la conception à la production"
+        ],
+        "challenge": "Toucher les utilisateurs Android et iOS sans maintenir deux bases de code distinctes — tout en offrant une expérience fluide, proche du natif.",
+        "solution": "Je développe des applications mobiles multiplateformes avec React Native et je les mène de la conception jusqu'à la production, adossées aux mêmes API REST sécurisées que les produits web.",
+        "features": [
+          {
+            "title": "Une base de code, deux plateformes",
+            "text": "Une seule base de code React Native pour des applications Android et iOS."
+          },
+          {
+            "title": "De la conception à la production",
+            "text": "La responsabilité de tout le parcours : interface, développement, tests et mise en ligne."
+          },
+          {
+            "title": "Connectées à la plateforme",
+            "text": "Les applications communiquent avec le back-end via des API REST sécurisées."
+          }
+        ],
+        "outcome": "Des applications mobiles livrées sur Android et iOS à partir d'une seule base de code React Native, en prolongement des plateformes web."
+      },
+      "webapps": {
+        "title": "Applications web full-stack & API",
+        "org": "Exadev",
+        "period": "2023 – Aujourd'hui",
+        "role": "Développeuse Full-Stack",
+        "summary": "Des plateformes Laravel + React avec des API REST sécurisées et un MySQL optimisé.",
+        "highlights": [
+          "Laravel + React",
+          "API REST sécurisées",
+          "MySQL optimisé"
+        ],
+        "challenge": "Les équipes produit avaient besoin d'applications web qui restent fiables et rapides en grandissant, avec une communication propre et solide entre front-end et back-end.",
+        "solution": "Je conçois et maintiens des applications full-stack avec Laravel, React.js, PHP et JavaScript : endpoints d'API REST sécurisés, schémas et requêtes MySQL optimisés, interfaces responsives avec React et Bootstrap — le tout livré en Agile Scrum avec des revues de code sous Git.",
+        "features": [
+          {
+            "title": "API REST sécurisées",
+            "text": "Des endpoints fiables pour la communication front-end/back-end entre les équipes produit."
+          },
+          {
+            "title": "MySQL optimisé",
+            "text": "Des schémas et des requêtes SQL retravaillés pour de meilleurs temps de réponse et une base plus performante."
+          },
+          {
+            "title": "Interfaces responsives",
+            "text": "Des interfaces React.js et Bootstrap impeccables sur toutes les tailles d'écran."
+          },
+          {
+            "title": "Travail en équipe",
+            "text": "Cérémonies Scrum avec des équipes pluridisciplinaires, gestion de versions Git/GitHub et revues de code."
+          }
+        ],
+        "outcome": "Des applications plus fiables et évolutives pour les utilisateurs, avec de meilleurs temps de réponse grâce à l'optimisation des schémas et des requêtes."
+      }
+    }
+  },
+  "caseStudy": {
+    "back": "Tous les projets",
+    "navLabel": "Sur cette page",
+    "meta": {
+      "role": "Rôle",
+      "period": "Période",
+      "context": "Contexte",
+      "stack": "Stack"
+    },
+    "sections": {
+      "challenge": "Le défi",
+      "solution": "La solution",
+      "architecture": "Architecture",
+      "features": "Fonctionnalités clés",
+      "stack": "Stack technique",
+      "outcome": "Résultat"
+    },
+    "architectureIntro": "Trois clients communiquent avec une passerelle d'API unique, qui route les requêtes vers des microservices FastAPI, adossés à la base de données et à trois moteurs intelligents.",
+    "diagram": {
+      "title": "Architecture de la plateforme omnicanale de gestion des tâches",
+      "clients": "Clients",
+      "web": "Application web",
+      "webTech": "React",
+      "mobile": "Application mobile",
+      "mobileTech": "React Native",
+      "extension": "Extension navigateur",
+      "extensionTech": "Web extension",
+      "gateway": "Passerelle d'API",
+      "gatewayDetail": "Point d'entrée unique · routage · sécurité",
+      "services": "Microservices FastAPI",
+      "servicesDetail": "API REST pensées pour l'évolutivité, la sécurité et la maintenabilité",
+      "data": "Données & intelligence",
+      "database": "Base de données",
+      "databaseDetail": "Schéma sur mesure",
+      "gemini": "API Gemini",
+      "geminiDetail": "Assistant de planification",
+      "ml": "Modèle ML",
+      "mlDetail": "Prédiction des retards",
+      "cpsat": "CP-SAT",
+      "cpsatDetail": "Priorisation automatique"
+    },
+    "next": "Projet suivant",
+    "ctaTitle": "Un produit en tête ?",
+    "ctaText": "J'aimerais beaucoup découvrir ce que vous construisez.",
+    "ctaButton": "Lancer la conversation"
+  },
+  "education": {
+    "eyebrow": "Formation",
+    "title": "Des bases d'ingénieure solides.",
+    "intro": "Un diplôme d'ingénieur de niveau master, construit sur un solide socle en informatique.",
+    "items": {
+      "engineering": {
+        "degree": "Diplôme d'ingénieur",
+        "badge": "Bac+6 · niveau master",
+        "field": "Génie Logiciel et Informatique Décisionnelle",
+        "school": "Institut International de Technologie de Sfax",
+        "period": "2023 – 2026",
+        "description": "Diplôme d'ingénieur de niveau master. Projet de fin d'études : une plateforme omnicanale intelligente de gestion des tâches, développée seule de bout en bout."
+      },
+      "bachelor": {
+        "degree": "Licence",
+        "badge": "Bac+3",
+        "field": "Informatique et Multimédia",
+        "school": "ISIMS — Institut Supérieur d'Informatique et de Multimédia de Sfax",
+        "period": "2020 – 2023",
+        "description": "Bases en programmation, développement web, bases de données et génie logiciel, avec de nombreux projets académiques concrets."
+      },
+      "bac": {
+        "degree": "Baccalauréat",
+        "badge": "Bac",
+        "field": "Sciences de l'informatique",
+        "school": "Lycée Hédi Chaker",
+        "period": "2020",
+        "description": "Baccalauréat en sciences de l'informatique — là où tout a commencé."
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Construisons ensemble quelque chose de remarquable.",
+    "intro": "Un produit à développer, une équipe à rejoindre ou une idée à explorer ? Écrivez-moi via le formulaire — votre message arrive directement dans ma boîte de réception et je vous répondrai.",
+    "channels": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    },
+    "form": {
+      "title": "Envoyer un message",
+      "name": "Nom",
+      "namePlaceholder": "Votre nom",
+      "email": "E-mail",
+      "emailPlaceholder": "vous@entreprise.com",
+      "message": "Message",
+      "messagePlaceholder": "Parlez-moi de votre projet, du poste ou de votre idée…",
+      "submit": "Envoyer le message",
+      "sending": "Envoi en cours…",
+      "required": "Obligatoire",
+      "successTitle": "Message envoyé !",
+      "successText": "Merci pour votre message. Je vous réponds très vite.",
+      "errorTitle": "Une erreur est survenue.",
+      "errorText": "Votre message n'a pas pu être envoyé. Veuillez réessayer dans un instant.",
+      "sendAnother": "Envoyer un autre message",
+      "errors": {
+        "name": "Veuillez indiquer votre nom.",
+        "email": "Veuillez saisir une adresse e-mail valide.",
+        "message": "Votre message doit contenir au moins 10 caractères."
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Ingénieure logiciel · Développeuse Full-Stack. Des produits complets, de bout en bout.",
+    "rights": "© {year} Zouhour Abdelli. Tous droits réservés.",
+    "built": "Conçu et développé avec Next.js, Tailwind CSS et Framer Motion.",
+    "backToTop": "Revenir en haut"
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Cette page n'existe pas.",
+    "text": "Le lien est peut-être rompu, ou la page a été déplacée.",
+    "cta": "Retour à l'accueil"
+  }
+}

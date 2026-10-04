@@ -1,0 +1,530 @@
+{
+  "meta": {
+    "title": "Zouhour Abdelli — Software Engineer · Full-Stack Developer",
+    "shortTitle": "Zouhour Abdelli",
+    "description": "Full-stack software engineer building complete products end to end — web, mobile and APIs — with Laravel, React, React Native and FastAPI. Based in Sfax, Tunisia.",
+    "keywords": [
+      "Zouhour Abdelli",
+      "Software Engineer",
+      "Full-Stack Developer",
+      "Laravel",
+      "React",
+      "React Native",
+      "FastAPI",
+      "REST APIs",
+      "Tunisia",
+      "Sfax"
+    ],
+    "ogAlt": "Zouhour Abdelli — Software Engineer and Full-Stack Developer"
+  },
+  "a11y": {
+    "skipToContent": "Skip to content",
+    "mainNav": "Main navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "languageSwitcher": "Choose language",
+    "toggleTheme": "Toggle light and dark theme",
+    "scrollToTop": "Back to top",
+    "newTab": "(opens in a new tab)",
+    "home": "Zouhour Abdelli — home",
+    "socialLinks": "Social links"
+  },
+  "nav": {
+    "brand": "Zouhour Abdelli",
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "education": "Education",
+    "contact": "Contact",
+    "hireMe": "Let's talk"
+  },
+  "languages": {
+    "en": "English",
+    "fr": "Français",
+    "ar": "العربية",
+    "short": {
+      "en": "EN",
+      "fr": "FR",
+      "ar": "عربي"
+    }
+  },
+  "hero": {
+    "badge": "Available for opportunities",
+    "greeting": "Hi, I'm",
+    "name": "Zouhour Abdelli",
+    "title": "Software Engineer · Full-Stack Developer",
+    "tagline": "I build complete products — web, mobile and APIs — from the first database schema to production.",
+    "location": "Based in Sfax, Tunisia",
+    "ctaWork": "View my work",
+    "ctaContact": "Contact me",
+    "ctaCv": "Download CV",
+    "photoAlt": "Portrait of Zouhour Abdelli, software engineer and full-stack developer",
+    "scroll": "Scroll",
+    "stats": [
+      {
+        "value": "4+",
+        "label": "Years building software"
+      },
+      {
+        "value": "Web + Mobile + APIs",
+        "label": "Every layer of the product"
+      },
+      {
+        "value": "0 → 1",
+        "label": "Full product lifecycle"
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "An engineer who owns the whole product, not just a ticket.",
+    "paragraphs": [
+      "I'm a full-stack software engineer who takes products from idea to production. At Exadev, I design and build scalable web and mobile applications with Laravel, React and React Native — owning everything from the database schema and REST APIs to the interface people actually use.",
+      "I hold an Engineering Degree (bac+6, Master's level) in Software Engineering and Business Intelligence from the International Institute of Technology of Sfax (2026), and a Bachelor's in Computer Science & Multimedia from ISIMS (2023). For my capstone, I designed and built an intelligent task-management platform on my own, end to end.",
+      "For three years I was an active member of the Microsoft Tech Club ISIMS — a reflection of how much I care about learning, sharing and moving technology forward with others."
+    ],
+    "highlights": {
+      "role": {
+        "label": "Currently",
+        "value": "Full-Stack Developer",
+        "detail": "Exadev · since June 2023"
+      },
+      "degree": {
+        "label": "Education",
+        "value": "Engineering Degree · bac+6",
+        "detail": "Software Engineering & BI · 2026"
+      },
+      "community": {
+        "label": "Community",
+        "value": "Microsoft Tech Club ISIMS",
+        "detail": "Active member for 3 years"
+      },
+      "location": {
+        "label": "Based in",
+        "value": "Sfax, Tunisia",
+        "detail": "Available for opportunities"
+      }
+    },
+    "principlesTitle": "How I work",
+    "principles": [
+      {
+        "title": "End-to-end ownership",
+        "text": "From scoping and schema design to deployment, I take responsibility for the whole lifecycle."
+      },
+      {
+        "title": "Built to scale",
+        "text": "Secure APIs, optimized queries and maintainable code that holds up as products grow."
+      },
+      {
+        "title": "Agile by default",
+        "text": "Scrum ceremonies, code reviews and clean Git workflows keep delivery steady and transparent."
+      }
+    ]
+  },
+  "skills": {
+    "eyebrow": "Skills",
+    "title": "A full-stack toolkit, from pixels to production.",
+    "intro": "The technologies and methods I use to design, build and ship complete products.",
+    "groups": {
+      "frontend": {
+        "title": "Front-End",
+        "description": "Interfaces that feel fast, clear and responsive on every screen.",
+        "items": [
+          "React.js",
+          "JavaScript",
+          "Bootstrap",
+          "Responsive UI"
+        ]
+      },
+      "backend": {
+        "title": "Back-End",
+        "description": "Secure, well-structured APIs and services designed to grow.",
+        "items": [
+          "Laravel",
+          "PHP",
+          "FastAPI",
+          "REST APIs",
+          "Microservices"
+        ]
+      },
+      "mobile": {
+        "title": "Mobile",
+        "description": "Cross-platform apps taken from design to production.",
+        "items": [
+          "React Native",
+          "Android & iOS",
+          "Android development"
+        ]
+      },
+      "data": {
+        "title": "Data",
+        "description": "Schemas and queries designed for performance.",
+        "items": [
+          "MySQL",
+          "SQL optimization",
+          "Database design"
+        ]
+      },
+      "ai": {
+        "title": "AI & Optimization",
+        "description": "Intelligence where it brings real value.",
+        "items": [
+          "Gemini API integration",
+          "Regression models",
+          "CP-SAT optimization"
+        ]
+      },
+      "languages": {
+        "title": "Languages",
+        "description": "The languages I write every day.",
+        "items": [
+          "PHP",
+          "JavaScript",
+          "Java",
+          "Python"
+        ]
+      },
+      "tools": {
+        "title": "Tools & Methods",
+        "description": "How I collaborate and keep quality high.",
+        "items": [
+          "Git",
+          "GitHub",
+          "Agile Scrum",
+          "Code reviews",
+          "Project management",
+          "Design"
+        ]
+      }
+    }
+  },
+  "experience": {
+    "eyebrow": "Experience",
+    "title": "Where I've been building.",
+    "intro": "From internships to full ownership of web and mobile products.",
+    "current": "Current",
+    "types": {
+      "work": "Full-time",
+      "internship": "Internship",
+      "community": "Community"
+    },
+    "items": {
+      "exadevFullstack": {
+        "role": "Full-Stack Developer",
+        "company": "Exadev",
+        "period": "Jun 2023 – Present",
+        "location": "Sfax, Tunisia",
+        "bullets": [
+          "Designed and maintained full-stack web applications with Laravel, React.js, PHP and JavaScript, improving reliability and scalability for end users.",
+          "Built and secured REST API endpoints for reliable front-end/back-end communication across product teams.",
+          "Optimized MySQL schemas and SQL queries, improving application response times and database performance.",
+          "Developed responsive interfaces with React.js and Bootstrap, and shipped cross-platform mobile apps (Android/iOS) with React Native, from design through production.",
+          "Collaborated in Agile Scrum ceremonies with cross-functional teams; used Git/GitHub for version control and code reviews."
+        ],
+        "note": "Also Mobile Engineer: React Native apps for Android & iOS."
+      },
+      "exadevIntern": {
+        "role": "Intern — Android Development & Design",
+        "company": "Exadev",
+        "period": "Feb 2023 – Jun 2023",
+        "location": "",
+        "bullets": [
+          "Android development and interface design during an on-site internship."
+        ],
+        "note": ""
+      },
+      "hypermediaDev": {
+        "role": "Developer",
+        "company": "Hypermedia",
+        "period": "Aug 2022 – Aug 2023",
+        "location": "",
+        "bullets": [
+          "Developed a web-based inventory management system: product catalog, order processing and sales statistics."
+        ],
+        "note": ""
+      },
+      "hypermediaIntern": {
+        "role": "Intern — PHP & Laravel",
+        "company": "Hypermedia",
+        "period": "Aug 2022 – Sep 2022",
+        "location": "Remote",
+        "bullets": [
+          "Remote internship focused on web development with PHP and Laravel."
+        ],
+        "note": ""
+      },
+      "mtc": {
+        "role": "Active Member",
+        "company": "Microsoft Tech Club ISIMS",
+        "period": "Dec 2020 – Dec 2023",
+        "location": "Sfax, Tunisia",
+        "bullets": [
+          "Three years contributing to the club's community, with a focus on design — and a lasting commitment to innovation and knowledge-sharing."
+        ],
+        "note": ""
+      }
+    }
+  },
+  "projects": {
+    "eyebrow": "Selected work",
+    "title": "Products I've designed, built and shipped.",
+    "intro": "From an AI-powered platform built solo to production apps used every day.",
+    "flagship": "Flagship project",
+    "viewCase": "View case study",
+    "items": {
+      "omnichannel": {
+        "title": "Omnichannel Intelligent Task-Management Platform",
+        "org": "Engineering capstone · International Institute of Technology",
+        "period": "2023 – 2026",
+        "role": "Sole engineer, end to end",
+        "summary": "A task-management platform that follows you across web, mobile and the browser — with an AI planning assistant, delay prediction and automated priority scheduling.",
+        "highlights": [
+          "Web app, mobile app & browser extension",
+          "Gemini-powered planning assistant",
+          "Delay prediction + CP-SAT scheduling"
+        ],
+        "challenge": "Tasks are scattered across devices and tools, and deciding what to work on next is still mostly guesswork. The goal was one platform that follows users across web, mobile and the browser and actively helps them plan their work — designed, built and delivered by a single engineer, on a production-grade architecture.",
+        "solution": "I designed and built an omnichannel platform on a FastAPI microservices architecture, serving a React web app, a React Native mobile app and a browser extension. On top of a carefully designed database schema and REST APIs, I added three intelligent capabilities: a context-aware planning assistant powered by the Gemini API, a regression model that predicts task delays, and a CP-SAT optimization algorithm that schedules priorities automatically.",
+        "features": [
+          {
+            "title": "Three clients, one platform",
+            "text": "A React web app, a React Native mobile app and a browser extension share the same APIs and data."
+          },
+          {
+            "title": "Context-aware planning assistant",
+            "text": "A Gemini API integration that understands the user's context to help plan the work ahead."
+          },
+          {
+            "title": "Task-delay prediction",
+            "text": "A regression model estimates which tasks are likely to slip, so users can act early."
+          },
+          {
+            "title": "Automated priority scheduling",
+            "text": "A CP-SAT optimization algorithm turns priorities and constraints into a schedule."
+          },
+          {
+            "title": "Microservices back end",
+            "text": "FastAPI services, a database schema and REST APIs designed for scalability, security and maintainability."
+          },
+          {
+            "title": "Full Agile lifecycle",
+            "text": "Scoping, design, development, testing and deployment, run in Scrum as the sole developer."
+          }
+        ],
+        "outcome": "A complete, intelligent product delivered end to end by one engineer: three client applications, a scalable microservices back end and three AI and optimization capabilities working together — the capstone of my engineering degree."
+      },
+      "inventory": {
+        "title": "Inventory Management System",
+        "org": "Hypermedia",
+        "period": "2022 – 2023",
+        "role": "Developer",
+        "summary": "A web-based inventory management system covering the product catalog, order processing and sales statistics.",
+        "highlights": [
+          "Product catalog",
+          "Order processing",
+          "Sales statistics"
+        ],
+        "challenge": "Products, orders and sales data needed to live in one place, so the catalog could be managed, orders processed and performance understood without juggling separate tools.",
+        "solution": "I developed a web application that brings the core of the business together: a structured product catalog, an order-processing workflow and a sales statistics dashboard.",
+        "features": [
+          {
+            "title": "Product catalog",
+            "text": "Create, organize and maintain products in a single structured catalog."
+          },
+          {
+            "title": "Order processing",
+            "text": "Follow every order through its workflow, from creation to completion."
+          },
+          {
+            "title": "Sales statistics",
+            "text": "A dashboard that turns sales data into clear, readable statistics."
+          }
+        ],
+        "outcome": "One web platform for the full inventory cycle — from adding a product to understanding how it sells."
+      },
+      "mobile": {
+        "title": "Cross-Platform Mobile Apps",
+        "org": "Exadev",
+        "period": "2023 – Present",
+        "role": "Mobile Engineer",
+        "summary": "React Native apps for Android and iOS, shipped from design through production.",
+        "highlights": [
+          "Android & iOS",
+          "One React Native codebase",
+          "Design to production"
+        ],
+        "challenge": "Reach users on both Android and iOS without maintaining two separate codebases — while keeping the experience smooth and native-feeling.",
+        "solution": "I build cross-platform mobile apps with React Native and take them all the way from design to production, backed by the same secured REST APIs as the web products.",
+        "features": [
+          {
+            "title": "One codebase, two platforms",
+            "text": "A single React Native codebase delivers apps for both Android and iOS."
+          },
+          {
+            "title": "From design to production",
+            "text": "Ownership of the full journey: interface, development, testing and release."
+          },
+          {
+            "title": "Connected to the platform",
+            "text": "Apps communicate with the back end through secured REST APIs."
+          }
+        ],
+        "outcome": "Mobile apps shipped to Android and iOS from a single React Native codebase, alongside the web platforms they extend."
+      },
+      "webapps": {
+        "title": "Full-Stack Web Applications & APIs",
+        "org": "Exadev",
+        "period": "2023 – Present",
+        "role": "Full-Stack Developer",
+        "summary": "Laravel + React platforms with secured REST APIs and optimized MySQL.",
+        "highlights": [
+          "Laravel + React",
+          "Secured REST APIs",
+          "Optimized MySQL"
+        ],
+        "challenge": "Product teams needed web applications that stay reliable and fast as they grow, with clean, dependable communication between front end and back end.",
+        "solution": "I design and maintain full-stack applications with Laravel, React.js, PHP and JavaScript: secured REST API endpoints, optimized MySQL schemas and queries, and responsive interfaces built with React and Bootstrap — delivered in Agile Scrum with Git-based code reviews.",
+        "features": [
+          {
+            "title": "Secured REST APIs",
+            "text": "Reliable endpoints for front-end/back-end communication across product teams."
+          },
+          {
+            "title": "Optimized MySQL",
+            "text": "Reworked schemas and SQL queries for faster response times and better database performance."
+          },
+          {
+            "title": "Responsive interfaces",
+            "text": "React.js and Bootstrap interfaces that work beautifully on every screen size."
+          },
+          {
+            "title": "Team workflow",
+            "text": "Scrum ceremonies with cross-functional teams, Git/GitHub version control and code reviews."
+          }
+        ],
+        "outcome": "More reliable, scalable applications for end users, with faster response times thanks to optimized schemas and queries."
+      }
+    }
+  },
+  "caseStudy": {
+    "back": "All projects",
+    "navLabel": "On this page",
+    "meta": {
+      "role": "Role",
+      "period": "Period",
+      "context": "Context",
+      "stack": "Stack"
+    },
+    "sections": {
+      "challenge": "The challenge",
+      "solution": "The solution",
+      "architecture": "Architecture",
+      "features": "Key features",
+      "stack": "Tech stack",
+      "outcome": "Outcome"
+    },
+    "architectureIntro": "Three clients talk to a single API gateway that routes requests to FastAPI microservices, backed by the database and three intelligent engines.",
+    "diagram": {
+      "title": "System architecture of the omnichannel task-management platform",
+      "clients": "Clients",
+      "web": "Web app",
+      "webTech": "React",
+      "mobile": "Mobile app",
+      "mobileTech": "React Native",
+      "extension": "Browser extension",
+      "extensionTech": "Web extension",
+      "gateway": "API Gateway",
+      "gatewayDetail": "Single entry point · routing · security",
+      "services": "FastAPI microservices",
+      "servicesDetail": "REST APIs designed for scalability, security and maintainability",
+      "data": "Data & intelligence",
+      "database": "Database",
+      "databaseDetail": "Custom schema",
+      "gemini": "Gemini API",
+      "geminiDetail": "Planning assistant",
+      "ml": "ML model",
+      "mlDetail": "Delay prediction",
+      "cpsat": "CP-SAT",
+      "cpsatDetail": "Priority scheduling"
+    },
+    "next": "Next project",
+    "ctaTitle": "Have a product in mind?",
+    "ctaText": "I'd love to hear what you're building.",
+    "ctaButton": "Start a conversation"
+  },
+  "education": {
+    "eyebrow": "Education",
+    "title": "Engineering foundations.",
+    "intro": "A Master's-level engineering degree built on a solid computer science background.",
+    "items": {
+      "engineering": {
+        "degree": "Engineering Degree",
+        "badge": "Diplôme d'Ingénieur · bac+6",
+        "field": "Software Engineering & Business Intelligence",
+        "school": "International Institute of Technology of Sfax",
+        "period": "2023 – 2026",
+        "description": "Master's-level engineering degree. Capstone: an omnichannel intelligent task-management platform, built solo end to end."
+      },
+      "bachelor": {
+        "degree": "Bachelor's Degree",
+        "badge": "Licence",
+        "field": "Computer Science & Multimedia",
+        "school": "ISIMS — Higher Institute of Computer Science and Multimedia of Sfax",
+        "period": "2020 – 2023",
+        "description": "Foundations in programming, web development, databases and software engineering, with hands-on academic projects."
+      },
+      "bac": {
+        "degree": "Baccalaureate",
+        "badge": "Bac",
+        "field": "Computer Science",
+        "school": "Lycée Hédi Chaker",
+        "period": "2020",
+        "description": "Baccalaureate in Computer Science — where it all started."
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let's build something great together.",
+    "intro": "Have a product to build, a team to join or an idea to explore? Send me a message below — it lands straight in my inbox and I'll get back to you.",
+    "channels": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    },
+    "form": {
+      "title": "Send a message",
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "you@company.com",
+      "message": "Message",
+      "messagePlaceholder": "Tell me about your project, role or idea…",
+      "submit": "Send message",
+      "sending": "Sending…",
+      "required": "Required",
+      "successTitle": "Message sent!",
+      "successText": "Thank you for reaching out. I'll get back to you soon.",
+      "errorTitle": "Something went wrong.",
+      "errorText": "Your message couldn't be sent. Please try again in a moment.",
+      "sendAnother": "Send another message",
+      "errors": {
+        "name": "Please enter your name.",
+        "email": "Please enter a valid email address.",
+        "message": "Please write a message of at least 10 characters."
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Software Engineer · Full-Stack Developer. Building complete products, end to end.",
+    "rights": "© {year} Zouhour Abdelli. All rights reserved.",
+    "built": "Designed & built with Next.js, Tailwind CSS and Framer Motion.",
+    "backToTop": "Back to top"
+  },
+  "notFound": {
+    "code": "404",
+    "title": "This page doesn't exist.",
+    "text": "The link may be broken, or the page may have moved.",
+    "cta": "Back to home"
+  }
+}
