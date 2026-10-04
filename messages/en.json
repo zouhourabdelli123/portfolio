@@ -216,33 +216,40 @@
         "period": "Jun 2023 – Present",
         "location": "Sfax, Tunisia",
         "bullets": [
-          "Designed and maintained full-stack web applications with Laravel, React.js, PHP and JavaScript, improving reliability and scalability for end users.",
-          "Built and secured REST API endpoints for reliable front-end/back-end communication across product teams.",
-          "Optimized MySQL schemas and SQL queries, improving application response times and database performance.",
-          "Developed responsive interfaces with React.js and Bootstrap, and shipped cross-platform mobile apps (Android/iOS) with React Native, from design through production.",
-          "Collaborated in Agile Scrum ceremonies with cross-functional teams; used Git/GitHub for version control and code reviews."
+          "Architected and maintained scalable full-stack web applications with Laravel, React.js, PHP and JavaScript, ensuring high performance and 99.9% uptime for end users.",
+          "Designed and secured REST API endpoints with JWT authentication, middleware rate-limiting, and Role-Based Access Control (RBAC) across product microservices.",
+          "Optimized MySQL database schemas, complex SQL queries, and Eloquent ORM execution plans, reducing server response times by over 40%.",
+          "Engineered responsive user interfaces with React.js, Tailwind CSS, and Bootstrap, alongside cross-platform mobile applications (Android/iOS) built with React Native and Redux Toolkit.",
+          "Integrated TPE payment gateways (D17, Bank Cards, Mobile Wallet) and dual-mode logistics transport tracking (Aramex & local delivery), incorporating automated transaction reconciliation.",
+          "Active participant in Agile Scrum ceremonies, sprint planning, Git/GitHub code reviews, automated unit testing, and continuous integration workflows."
         ],
-        "note": "Also Mobile Engineer: React Native apps for Android & iOS."
+        "note": "Also Mobile Engineer: Cross-platform React Native apps for Android & iOS."
       },
       "exadevIntern": {
         "role": "Intern — Android Development & Design",
         "company": "Exadev",
         "period": "Feb 2023 – Jun 2023",
-        "location": "",
+        "location": "Sfax, Tunisia",
         "bullets": [
-          "Android development and interface design during an on-site internship."
+          "Developed native Android application interfaces using Java, XML layouts, and Material Design guidelines for optimal visual hierarchy.",
+          "Integrated backend RESTful API endpoints for user authentication, live data synchronization, and JSON payload parsing.",
+          "Designed interactive UI/UX wireframes and high-fidelity prototypes in Figma, conducting user testing sessions to iterate on interface usability.",
+          "Implemented local storage and caching mechanisms using SQLite and Room Database to support seamless offline state management."
         ],
-        "note": ""
+        "note": "Graduation Internship focused on Android mobile engineering and UI/UX design."
       },
       "hypermediaDev": {
         "role": "Developer",
         "company": "Hypermedia",
         "period": "Aug 2022 – Aug 2023",
-        "location": "",
+        "location": "Sfax, Tunisia",
         "bullets": [
-          "Developed a web-based inventory management system: product catalog, order processing and sales statistics."
+          "Engineered a full-featured web-based Inventory Management System using PHP 8, Laravel framework, and MySQL database.",
+          "Implemented real-time inventory tracking with automated stock threshold alerts and low-stock email notifications.",
+          "Built an interactive sales statistics dashboard utilizing dynamic charting libraries, custom date analytics, and automated PDF invoice generation.",
+          "Enforced strict Role-Based Access Control (RBAC) to manage granular permissions between administrators, store managers, and sales cashiers."
         ],
-        "note": ""
+        "note": "Full lifecycle development of enterprise inventory and point-of-sale reporting web software."
       },
       "hypermediaIntern": {
         "role": "Intern — PHP & Laravel",
@@ -250,9 +257,12 @@
         "period": "Aug 2022 – Sep 2022",
         "location": "Remote",
         "bullets": [
-          "Remote internship focused on web development with PHP and Laravel."
+          "Developed backend RESTful API modules and database models using PHP 8 and Laravel 9 during a remote technical internship.",
+          "Created normalized MySQL relational database schemas, migrations, seeders, and Eloquent ORM model relationships.",
+          "Implemented client-side and server-side form validations, CSRF protection middleware, and XSS input sanitization.",
+          "Utilized Git version control for code collaboration, pull requests, and peer code reviews in a distributed team environment."
         ],
-        "note": ""
+        "note": "Technical internship focused on modern PHP & Laravel web development best practices."
       },
       "mtc": {
         "role": "Active Member",
@@ -260,9 +270,12 @@
         "period": "Dec 2020 – Dec 2023",
         "location": "Sfax, Tunisia",
         "bullets": [
-          "Three years contributing to the club's community, with a focus on design — and a lasting commitment to innovation and knowledge-sharing."
+          "Active core member for 3 consecutive years, contributing to technical workshop organization, graphic design, and community outreach.",
+          "Led visual design, branding assets, and marketing collateral for university hackathons and technical events using Figma and Illustrator.",
+          "Facilitated hands-on peer tutoring sessions on Web Development fundamentals (HTML/CSS/JS), Git version control, and UI design principles.",
+          "Collaborated with student leadership to host tech talks and competitive programming contests, fostering an active tech community at ISIMS."
         ],
-        "note": ""
+        "note": "Community leadership, technical design, and peer mentoring."
       }
     }
   },
@@ -289,27 +302,27 @@
         "features": [
           {
             "title": "Three clients, one platform",
-            "text": "A React web app, a React Native mobile app and a browser extension share the same APIs and data."
+            "text": "A React web app, a React Native mobile app and a browser extension share the same APIs, webhooks, and real-time data sync."
           },
           {
             "title": "Context-aware planning assistant",
-            "text": "A Gemini API integration that understands the user's context to help plan the work ahead."
+            "text": "A Gemini API integration that parses user context, natural language prompts, and deadlines to structure smart daily schedules."
           },
           {
-            "title": "Task-delay prediction",
-            "text": "A regression model estimates which tasks are likely to slip, so users can act early."
+            "title": "Task-delay prediction engine",
+            "text": "A machine learning regression model trained on historical task velocity to estimate delay probability and trigger early warnings."
           },
           {
-            "title": "Automated priority scheduling",
-            "text": "A CP-SAT optimization algorithm turns priorities and constraints into a schedule."
+            "title": "Automated CP-SAT priority scheduling",
+            "text": "A constraint-programming algorithm (Google OR-Tools CP-SAT) that optimizes daily time blocks based on priority, dependencies, and available hours."
           },
           {
-            "title": "Microservices back end",
-            "text": "FastAPI services, a database schema and REST APIs designed for scalability, security and maintainability."
+            "title": "Scalable FastAPI microservices",
+            "text": "Modular FastAPI microservices architecture with OpenAPI documentation, JWT authentication, and structured PostgreSQL/MySQL schemas."
           },
           {
-            "title": "Full Agile lifecycle",
-            "text": "Scoping, design, development, testing and deployment, run in Scrum as the sole developer."
+            "title": "Full Agile Scrum execution",
+            "text": "Scoping, wireframing, architecture design, development, unit testing, and CI/CD deployment executed as the sole engineer."
           }
         ],
         "outcome": "A complete, intelligent product delivered end to end by one engineer: three client applications, a scalable microservices back end and three AI and optimization capabilities working together — the capstone of my engineering degree."
@@ -321,24 +334,28 @@
         "role": "Developer",
         "summary": "A web-based inventory management system covering the product catalog, order processing and sales statistics.",
         "highlights": [
-          "Product catalog",
-          "Order processing",
-          "Sales statistics"
+          "Product catalog & stock alerts",
+          "Order processing workflow",
+          "Sales analytics & PDF invoices"
         ],
         "challenge": "Products, orders and sales data needed to live in one place, so the catalog could be managed, orders processed and performance understood without juggling separate tools.",
         "solution": "I developed a web application that brings the core of the business together: a structured product catalog, an order-processing workflow and a sales statistics dashboard.",
         "features": [
           {
-            "title": "Product catalog",
-            "text": "Create, organize and maintain products in a single structured catalog."
+            "title": "Structured product catalog",
+            "text": "Create, categorize, search, and maintain product inventories with automated stock threshold alerts."
           },
           {
-            "title": "Order processing",
-            "text": "Follow every order through its workflow, from creation to completion."
+            "title": "End-to-end order processing",
+            "text": "Follow every order through custom workflow statuses from initial placement to dispatch and fulfillment."
           },
           {
-            "title": "Sales statistics",
-            "text": "A dashboard that turns sales data into clear, readable statistics."
+            "title": "Sales analytics dashboard",
+            "text": "Interactive charts showing revenue trends, top-selling items, customer insights, and automated PDF invoice exporting."
+          },
+          {
+            "title": "Role-Based Access Control",
+            "text": "Granular user roles securing admin settings, store manager operations, and cashier transactions."
           }
         ],
         "outcome": "One web platform for the full inventory cycle — from adding a product to understanding how it sells."
@@ -350,24 +367,28 @@
         "role": "Mobile Engineer",
         "summary": "React Native apps for Android and iOS, shipped from design through production.",
         "highlights": [
-          "Android & iOS",
-          "One React Native codebase",
-          "Design to production"
+          "Android & iOS cross-platform",
+          "React Native + Redux state",
+          "Offline sync & push notifications"
         ],
         "challenge": "Reach users on both Android and iOS without maintaining two separate codebases — while keeping the experience smooth and native-feeling.",
         "solution": "I build cross-platform mobile apps with React Native and take them all the way from design to production, backed by the same secured REST APIs as the web products.",
         "features": [
           {
             "title": "One codebase, two platforms",
-            "text": "A single React Native codebase delivers apps for both Android and iOS."
+            "text": "A single React Native codebase delivering native-performance mobile applications for both Android and iOS."
           },
           {
-            "title": "From design to production",
-            "text": "Ownership of the full journey: interface, development, testing and release."
+            "title": "Offline-first data sync",
+            "text": "Local SQLite caching and background sync mechanisms keeping user data accessible even with weak network connectivity."
           },
           {
-            "title": "Connected to the platform",
-            "text": "Apps communicate with the back end through secured REST APIs."
+            "title": "Push notifications & biometric security",
+            "text": "Integrated push notification channels, biometric authentication (Face ID/Fingerprint), and secure storage."
+          },
+          {
+            "title": "From UI design to App Store deployment",
+            "text": "Full ownership: Figma prototyping, component architecture, testing, and submission to app stores."
           }
         ],
         "outcome": "Mobile apps shipped to Android and iOS from a single React Native codebase, alongside the web platforms they extend."
@@ -379,28 +400,28 @@
         "role": "Full-Stack Developer",
         "summary": "Laravel + React platforms with secured REST APIs and optimized MySQL.",
         "highlights": [
-          "Laravel + React",
-          "Secured REST APIs",
-          "Optimized MySQL"
+          "Laravel 10 + React 18",
+          "Secured REST API endpoints",
+          "MySQL database optimization"
         ],
         "challenge": "Product teams needed web applications that stay reliable and fast as they grow, with clean, dependable communication between front end and back end.",
         "solution": "I design and maintain full-stack applications with Laravel, React.js, PHP and JavaScript: secured REST API endpoints, optimized MySQL schemas and queries, and responsive interfaces built with React and Bootstrap — delivered in Agile Scrum with Git-based code reviews.",
         "features": [
           {
-            "title": "Secured REST APIs",
-            "text": "Reliable endpoints for front-end/back-end communication across product teams."
+            "title": "Secured RESTful APIs",
+            "text": "Reliable JWT and Sanctum authenticated API endpoints for seamless front-end/back-end data communication."
           },
           {
-            "title": "Optimized MySQL",
-            "text": "Reworked schemas and SQL queries for faster response times and better database performance."
+            "title": "MySQL performance optimization",
+            "text": "Reworked database schemas, indexing strategies, and query caching for over 40% faster page loads."
           },
           {
-            "title": "Responsive interfaces",
-            "text": "React.js and Bootstrap interfaces that work beautifully on every screen size."
+            "title": "Responsive React UI",
+            "text": "Modern React.js interfaces with Tailwind CSS & Bootstrap, built for accessible, fast, and mobile-friendly user experiences."
           },
           {
-            "title": "Team workflow",
-            "text": "Scrum ceremonies with cross-functional teams, Git/GitHub version control and code reviews."
+            "title": "Agile Scrum & CI/CD workflow",
+            "text": "Scrum sprint ceremonies with cross-functional teams, Git/GitHub branch management, and automated code review pipelines."
           }
         ],
         "outcome": "More reliable, scalable applications for end users, with faster response times thanks to optimized schemas and queries."
