@@ -30,7 +30,7 @@ export const siteConfig = {
    * the key arrives by email). Paste it here, or set the
    * NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY repository variable.
    */
-  web3formsAccessKey: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "",
+  web3formsAccessKey: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "e6473ae4-5174-4964-87ff-31c0143c00cf",
 } as const;
 
 export const ogLocales: Record<string, string> = {
